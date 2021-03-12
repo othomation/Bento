@@ -31,8 +31,6 @@
 }
 
 /* Dark theme  */
-@media (prefers-color-scheme: dark) {
-  /* Dark theme styles go here */
 
 .darktheme {
   --accent: #f8c8dc; /* Hover color */
@@ -44,8 +42,6 @@
     rgba(0, 0, 0, 0.7),
     rgba(0, 0, 0, 0.7)
   ); /* Filter color */
-}
-  
 }
 
 /* S T Y L E S */

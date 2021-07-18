@@ -1,5 +1,6 @@
 // Store the theme
-let darkTheme = localStorage.getItem("darkTheme");
+// let darkTheme = localStorage.getItem("darkTheme");//
+let darkTheme = null
 const themeToggle = document.querySelector("#themeButton");
 
 // Apply Dark theme

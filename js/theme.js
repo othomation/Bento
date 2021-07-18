@@ -6,7 +6,7 @@ const themeToggle = document.querySelector("#themeButton");
 // Apply Dark theme
 const enableDark = () => {
   document.body.classList.add("darktheme");
-  localStorage.setItem("darkTheme", "enabled");
+  darkTHeme = "enabled";
   themeToggle.innerHTML = `<i id="themeButton__icon" data-feather="sun"></i>`;
   feather.replace();
 };
@@ -14,7 +14,7 @@ const enableDark = () => {
 // Remove Dark theme
 const disableDark = () => {
   document.body.classList.remove("darktheme");
-  localStorage.setItem("darkTheme", null);
+  darkTheme = null;
   themeToggle.innerHTML = `<i id="themeButton__icon" data-feather="moon"></i>`;
   feather.replace();
 };
@@ -27,8 +27,7 @@ if (darkTheme === "enabled") {
 }
 
 themeToggle.addEventListener("click", () => {
-  darkTheme = localStorage.getItem("darkTheme");
-  if (darkTheme !== "enabled") {
+  if (darkTheme === null) {
     enableDark();
   } else {
     disableDark();

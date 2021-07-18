@@ -6,7 +6,7 @@ const themeToggle = document.querySelector("#themeButton");
 // Apply Dark theme
 const enableDark = () => {
   document.body.classList.add("darktheme");
-  darkTHeme = "enabled";
+  darkTheme = "enabled";
   themeToggle.innerHTML = `<i id="themeButton__icon" data-feather="sun"></i>`;
   feather.replace();
 };

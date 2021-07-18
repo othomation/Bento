@@ -11,13 +11,13 @@ function switchFeather(isDarkTheme) {
 function enableDark() {
   document.body.classList.add('darktheme');
   darkTheme = true;
-  switchFether(darkTheme);
+  switchFeather(darkTheme);
 }
 
 function disableDark() {
   document.body.classList.add('darktheme');
   darkTheme = false;
-  switchFether(darkTheme);
+  switchFeather(darkTheme);
 }
 
 function toggleTheme() {

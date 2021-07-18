@@ -1,38 +1,32 @@
-// Store the theme
-// let darkTheme = localStorage.getItem("darkTheme");//
-let darkTheme = "enabled"
+let darkTheme = true;
 const themeToggle = document.querySelector("#themeButton");
 
-// Apply Dark theme
-const enableDark = () => {
-  document.body.classList.add("darktheme");
-  darkTheme = "enabled";
-  themeToggle.innerHTML = `<i id="themeButton__icon" data-feather="sun"></i>`;
-  feather.replace();
-};
+enableDark();
 
-// Remove Dark theme
-const disableDark = () => {
-  document.body.classList.remove("darktheme");
-  darkTheme = null;
-  themeToggle.innerHTML = `<i id="themeButton__icon" data-feather="moon"></i>`;
-  feather.replace();
-};
-
-//Toggle theme
-if (darkTheme === "enabled") {
-  enableDark();
-} else {
-  disableDark();
+function switchFeather(isDarkTheme) {
+  themeToggle.innerHTML = `<i id="themeButton__icon" data-feather="${isDarkTheme?'moon':'sun'}"></i>`;
+  feather.replace();  
 }
 
-themeToggle.addEventListener("click", () => {
-  if (darkTheme === null) {
-    enableDark();
-  } else {
-    disableDark();
-  }
-});
+function enableDark() {
+  document.body.classList.add('darktheme');
+  darkTheme = true;
+  switchFether(darkTheme);
+}
+
+function disableDark() {
+  document.body.classList.add('darktheme');
+  darkTheme = false;
+  switchFether(darkTheme);
+}
+
+function toggleTheme() {
+  document.body.classList.toggle('darktheme');
+  darkTheme = !darkTheme;
+  switchFeather(darkTheme);
+}
+
+themeToggle.addEventListener("click", toggleTheme);
 
 // Theme accordint the hour
 

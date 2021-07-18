@@ -20,7 +20,7 @@ const disableDark = () => {
 };
 
 //Toggle theme
-if (darkTheme !== "enabled") {
+if (darkTheme === "enabled") {
   enableDark();
 } else {
   disableDark();
